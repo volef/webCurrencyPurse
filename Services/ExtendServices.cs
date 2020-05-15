@@ -16,7 +16,7 @@ namespace webTest.Services
             
             switch (useparser)
             {
-                case "SBR":
+                case "СBR":
                 {
                     collection.AddTransient<ICurrencyParser, CbrCurrencyParser>();
                     break;
