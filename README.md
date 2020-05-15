@@ -5,7 +5,7 @@
  See [Building](https://github.com/dotnet/aspnetcore/blob/master/docs/BuildFromSource.md).
 
 # Настройка
- Для нормального фукционирования необходимо настроить  `appsettings.json`, указав строку подключения к БД `DefaultConnection` и тип парсера валюты `Parser`
+ Для нормального фукционирования необходимо настроить  `appsettings.json`, указав строку подключения к БД `DefaultConnection` и тип парсера валюты `Parser` (`СBR` или `ECB`)
  
 # О парсерах валюты
  По умолчанию в проекте два реализованных парсера курсов валюты :
