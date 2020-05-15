@@ -5,10 +5,10 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using webTest.Models;
-using webTest.Serialization;
+using webCurrencyPurse.Models;
+using webCurrencyPurse.Serialization;
 
-namespace webTest.Services.Convert
+namespace webCurrencyPurse.Services.Convert
 {
     public class CbrCurrencyParser : ICurrencyParser
     {
@@ -32,7 +32,8 @@ namespace webTest.Services.Convert
 
         private static Task<List<Currency>> Parse(ValCurs toparse)
         {
-            var result = toparse.Valute.Select(currency => new Currency {Name = currency.CharCode, Rate = decimal.Parse(currency.Value) / currency.Nominal}).ToList();
+            var result = toparse.Valute.Select(currency => new Currency
+                {Name = currency.CharCode, Rate = decimal.Parse(currency.Value) / currency.Nominal}).ToList();
 
             return Task.FromResult(result);
         }

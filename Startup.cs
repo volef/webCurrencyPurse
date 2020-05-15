@@ -8,10 +8,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using webTest.Data;
-using webTest.Services;
+using webCurrencyPurse.Data;
+using webCurrencyPurse.Services;
 
-namespace webTest
+namespace webCurrencyPurse
 {
     public class Startup
     {
@@ -27,16 +27,12 @@ namespace webTest
         public void ConfigureServices(IServiceCollection services)
         {
             if (_env.IsDevelopment())
-            {
                 services.AddDbContext<ApplicationDbContext>(builder =>
                     builder.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            }
             else
-            {
                 services.AddDbContext<ApplicationDbContext>(builder =>
                     builder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            }
-            
+
             services.AddUserManager();
             services.AddCurrencyParser(Configuration["Parser"]);
             services.AddCurrencyConverter();
@@ -70,16 +66,13 @@ namespace webTest
             app.UseRouting();
 
             app.UseSwagger();
-            
+
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API валютного кошелька");
-                c.RoutePrefix = String.Empty;
+                c.RoutePrefix = string.Empty;
             });
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }

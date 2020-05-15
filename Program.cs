@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using webTest.Data;
+using webCurrencyPurse.Data;
 
-namespace webTest
+namespace webCurrencyPurse
 {
     public class Program
     {
@@ -25,7 +25,7 @@ namespace webTest
         private static void FirstDbStart(IHost host)
         {
             using var scope = host.Services.CreateScope();
-            
+
             var services = scope.ServiceProvider;
             try
             {

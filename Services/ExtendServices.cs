@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using webTest.Services.Convert;
+using webCurrencyPurse.Services.Convert;
 
-namespace webTest.Services
+namespace webCurrencyPurse.Services
 {
     public static class ExtendServices
     {
@@ -13,7 +13,7 @@ namespace webTest.Services
         public static void AddCurrencyParser(this IServiceCollection collection, string useparser)
         {
             collection.AddHttpClient();
-            
+
             switch (useparser)
             {
                 case "СBR":

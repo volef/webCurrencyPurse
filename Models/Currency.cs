@@ -1,4 +1,4 @@
-﻿namespace webTest.Models
+﻿namespace webCurrencyPurse.Models
 {
     public class Currency
     {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using webTest.Models;
+using webCurrencyPurse.Models;
 
-namespace webTest.Services.Convert
+namespace webCurrencyPurse.Services.Convert
 {
     public class CurrencyConverter : ICurrencyConverter
     {
@@ -46,7 +46,7 @@ namespace webTest.Services.Convert
             if (fromrate == null || torate == null)
                 return -1m;
 
-            return (fromrate.Value*money) / torate.Value;
+            return fromrate.Value * money / torate.Value;
         }
     }
 }

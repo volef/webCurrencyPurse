@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-using webTest.Serialization;
+using webCurrencyPurse.Serialization;
 
-namespace webTest.Models
+namespace webCurrencyPurse.Models
 {
     public class Bill
     {

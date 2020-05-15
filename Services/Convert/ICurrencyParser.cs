@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using webTest.Models;
+using webCurrencyPurse.Models;
 
-namespace webTest.Services.Convert
+namespace webCurrencyPurse.Services.Convert
 {
     public interface ICurrencyParser
     {

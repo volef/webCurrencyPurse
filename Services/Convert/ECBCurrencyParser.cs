@@ -5,10 +5,10 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using webTest.Models;
-using webTest.Serialization;
+using webCurrencyPurse.Models;
+using webCurrencyPurse.Serialization;
 
-namespace webTest.Services.Convert
+namespace webCurrencyPurse.Services.Convert
 {
     public class EcbCurrencyParser : ICurrencyParser
     {
@@ -32,7 +32,8 @@ namespace webTest.Services.Convert
 
         private static Task<List<Currency>> Parse(Envelope toparse)
         {
-            var result = toparse.Cube.Cube1.Cube.Select(currency => new Currency {Name = currency.Currency, Rate = currency.Rate}).ToList();
+            var result = toparse.Cube.Cube1.Cube
+                .Select(currency => new Currency {Name = currency.Currency, Rate = currency.Rate}).ToList();
 
             return Task.FromResult(result);
         }

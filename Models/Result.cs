@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using webTest.Serialization;
-
-namespace webTest.Models
+﻿namespace webCurrencyPurse.Models
 {
     public enum ResultEnum
     {

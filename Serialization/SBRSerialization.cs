@@ -1,13 +1,13 @@
 ﻿using System.Xml.Serialization;
 
-namespace webTest.Serialization
+namespace webCurrencyPurse.Serialization
 {
     // Примечание. Для запуска созданного кода может потребоваться NET Framework версии 4.5 или более поздней версии и .NET Core или Standard версии 2.0 или более поздней.
     /// <remarks/>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(AnonymousType = true)]
-    [XmlRootAttribute(Namespace = "", IsNullable = false)]
+    [XmlType(AnonymousType = true)]
+    [XmlRoot(Namespace = "", IsNullable = false)]
     public class ValCurs
     {
         private ValCursValute[] _valuteField;
@@ -17,7 +17,7 @@ namespace webTest.Serialization
         private string _nameField;
 
         /// <remarks/>
-        [XmlElementAttribute("Valute")]
+        [XmlElement("Valute")]
         public ValCursValute[] Valute
         {
             get => _valuteField;
@@ -25,7 +25,7 @@ namespace webTest.Serialization
         }
 
         /// <remarks/>
-        [XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string Date
         {
             get => _dateField;
@@ -33,7 +33,7 @@ namespace webTest.Serialization
         }
 
         /// <remarks/>
-        [XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string Name
         {
             get => _nameField;
@@ -44,7 +44,7 @@ namespace webTest.Serialization
     /// <remarks/>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(AnonymousType = true)]
+    [XmlType(AnonymousType = true)]
     public class ValCursValute
     {
         private ushort _numCodeField;
@@ -95,7 +95,7 @@ namespace webTest.Serialization
         }
 
         /// <remarks/>
-        [XmlAttributeAttribute()]
+        [XmlAttribute()]
         public string Id
         {
             get => _idField;

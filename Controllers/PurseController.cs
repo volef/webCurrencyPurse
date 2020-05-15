@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using webTest.Models;
-using webTest.Serialization;
-using webTest.Services;
+using webCurrencyPurse.Models;
+using webCurrencyPurse.Services;
 
-namespace webTest.Controllers
+namespace webCurrencyPurse.Controllers
 {
     [ApiController]
     public class PurseController : ControllerBase

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace webTest.Models
+namespace webCurrencyPurse.Models
 {
     public class Purse
     {

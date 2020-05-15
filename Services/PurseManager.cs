@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using webTest.Data;
-using webTest.Models;
+using webCurrencyPurse.Data;
+using webCurrencyPurse.Models;
 
-namespace webTest.Services
+namespace webCurrencyPurse.Services
 {
     public interface IPurseManager
     {

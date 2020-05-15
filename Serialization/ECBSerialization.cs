@@ -1,4 +1,4 @@
-﻿namespace webTest.Serialization
+﻿namespace webCurrencyPurse.Serialization
 {
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]

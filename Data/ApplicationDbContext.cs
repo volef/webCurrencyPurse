@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using webTest.Models;
+using webCurrencyPurse.Models;
 
-namespace webTest.Data
+namespace webCurrencyPurse.Data
 {
     public class ApplicationDbContext : DbContext
     {

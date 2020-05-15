@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using webTest.Data;
-using webTest.Models;
-using webTest.Services.Convert;
+using webCurrencyPurse.Data;
+using webCurrencyPurse.Models;
+using webCurrencyPurse.Services.Convert;
 
-namespace webTest.Services
+namespace webCurrencyPurse.Services
 {
     public interface IBillManager
     {
@@ -54,7 +54,7 @@ namespace webTest.Services
             var getBillResult = await GetBillAsync(userid, currency);
             if (getBillResult.Status == ResultEnum.Error)
                 return new Result<Bill>(getBillResult.Status, getBillResult.Value, getBillResult.Description);
-            
+
             if (cashvalue <= 0)
                 return new Result<Bill>(ResultEnum.Error, getBillResult.Value, "Invalid cashvalue");
 
@@ -86,7 +86,7 @@ namespace webTest.Services
             var getBillResult = await GetBillAsync(userid, currency);
             if (getBillResult.Status != ResultEnum.Success)
                 return new Result<Bill>(getBillResult.Status, getBillResult.Value, getBillResult.Description);
-            
+
             if (cashvalue <= 0)
                 return new Result<Bill>(ResultEnum.Error, getBillResult.Value, "Invalid cashvalue");
 
@@ -123,7 +123,7 @@ namespace webTest.Services
                 if (fromBill.Cash < cashvalue)
                     return new Result<Purse>(ResultEnum.Error, purseResult.Value, "Not enough money for convertation");
 
-                var cashToAdd = await _currencyConverter.GetConvertCashAsync(fromcurrency,cashvalue, tocurrency);
+                var cashToAdd = await _currencyConverter.GetConvertCashAsync(fromcurrency, cashvalue, tocurrency);
                 if (cashToAdd <= 0)
                     return new Result<Purse>(ResultEnum.Error, purseResult.Value, "Error convertation");
 
