@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <RootNamespace>webTest</RootNamespace>
+        <RootNamespace>webCurrencyPurse</RootNamespace>
     </PropertyGroup>
 
     <PropertyGroup>
