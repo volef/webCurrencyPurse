@@ -1,0 +1,27 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:23230",
+      "sslPort": 44334
+    }
+  },
+  "profiles": {
+    "webTest Dev": {
+      "commandName": "Project",
+      "applicationUrl": "https://localhost:443;http://localhost:80",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "webTest Release": {
+      "commandName": "Project",
+      "applicationUrl": "https://localhost:443;http://localhost:80",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      }
+    }
+  }
+}
