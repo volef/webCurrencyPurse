@@ -62,7 +62,7 @@ namespace webCurrencyPurse
         {
             if (_env.IsDevelopment()) app.UseDeveloperExceptionPage();
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseSwagger();
